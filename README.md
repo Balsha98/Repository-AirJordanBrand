@@ -1,2 +1,2 @@
-# Repository-AirJordanBrand
-AirJordanBrand - Jordan Shoe Selection Website
+# AirJordanBrand - Jordan Shoe Selection Website
+The README file will soon be updated.
