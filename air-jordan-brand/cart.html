@@ -5,22 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/cart.css">
-    <link rel="icon" href="assets/media/images/jordan_icon.png">
+    <link rel="icon" href="assets/media/images/jordan-icon.png">
+    <link rel="stylesheet" href="assets/css/cart-media-queries.css">
     <script src="assets/js/cookie.js" defer></script>
     <script src="assets/js/order.js" defer></script>
     <title>Cart | Air Jordan Brand</title>
 </head>
 
 <body>
-    <div class="photo_overlay"></div>
+    <div class="photo-overlay"></div>
 
-    <div id="content_div">
-        <a href="index.html" id="back_btn">&#10229;</a>
-        <div id="confirmation_div">
+    <div class="content-div">
+        <a href="index.html" class="back-btn">&#10229;</a>
+        <div class="confirmation-div">
             <h1>Your Cart</h1>
-            <div id="text_div">
+            <div class="text-div">
                 <h2>Your cart is currently empty.</h2>
-                <div id="data_div">
+                <div class="data-div">
                     <p>Shoe:<br>
                         M/F:<br>
                         Color:<br>
@@ -28,28 +29,28 @@
                         Depth:
                     </p>
                     <p>
-                        <span class="shoe_info">/</span><br>
-                        <span class="shoe_info">/</span><br>
-                        <span class="shoe_info">/</span><br>
-                        <span class="shoe_info">/</span><br>
-                        <span class="shoe_info">/</span>
+                        <span class="shoe-info">/</span><br>
+                        <span class="shoe-info">/</span><br>
+                        <span class="shoe-info">/</span><br>
+                        <span class="shoe-info">/</span><br>
+                        <span class="shoe-info">/</span>
                     </p>
                 </div>
             </div>
-            <button id="confirm_order">Confirm Order</button>
+            <button class="confirm-order">Confirm Order</button>
         </div>
     </div>
 
-    <div class="window_overlay hidden_window"></div>
+    <div class="window-overlay hidden-window"></div>
 
-    <section class="confirmation_window hidden_window">
+    <section class="confirmation-window hidden-window">
         <h2>Order Successful!</h2>
         <p>
             Your order has been confirmed and
             will be with you in 5-7 business days.<br>
-            <span id="ending_msg">Thank you for choosing Air Jordan!</span>
+            <span class="ending-msg">Thank you for choosing Air Jordan!</span>
         </p>
-        <a href="index.html" id="home_btn">Home</a>
+        <a href="index.html" class="home-btn">Home</a>
     </section>
 </body>
 

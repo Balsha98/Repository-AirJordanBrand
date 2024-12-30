@@ -1,0 +1,353 @@
+/* TABLET MEDIA QUERY */
+@media screen and (min-width: 950px) and (max-width: 1250px) {
+    body {
+        padding: 35px 50px;
+    }
+
+    #content_div {
+        flex-direction: column;
+    }
+
+    #back_btn {
+        margin-bottom: 25px;
+    }
+
+    #confirmation_div {
+        width: 100%;
+        height: 575px;
+        border-width: 35px;
+    }
+
+    #confirmation_div h1 {
+        right: 35px;
+        font-size: 24pt;
+    }
+
+    #text_div h2 {
+        font-size: 20pt;
+    }
+
+    #data_div p {
+        font-size: 14pt;
+    }
+
+    #confirm_order {
+        width: 175px;
+        padding: 15px 25px;
+        font-size: 12pt;
+    }
+
+    .confirmation_window {
+        width: 70%;
+    }
+
+    .confirmation_window h2 {
+        font-size: 22pt;
+    }
+}
+
+/* TABLET MEDIA QUERY */
+@media screen and (min-width: 650px) and (max-width: 949px) {
+    body {
+        padding: 35px 0px;
+        background-image: unset;
+    }
+
+    #content_div {
+        flex-direction: column;
+    }
+
+    #back_btn {
+        margin: auto auto 25px 25px;
+    }
+
+    #confirmation_div {
+        width: 100%;
+        height: 575px;
+        border-width: 25px;
+    }
+
+    #confirmation_div h1 {
+        top: 25px;
+        right: 35px;
+        font-size: 20pt;
+    }
+
+    #confirmation_div img {
+        right: -30px;
+        bottom: -30px;
+    }
+
+    @keyframes shoe_appear {
+        from {
+            bottom: -600px;
+            transform: rotate(-360deg);
+        }
+        to {
+            bottom: -30px;
+            transform: rotate(-7.5deg);
+        }
+    }
+
+    #text_div h2 {
+        font-size: 18pt;
+    }
+
+    #data_div p {
+        font-size: 14pt;
+    }
+
+    #confirm_order {
+        width: 150px;
+        padding: 15px;
+        font-size: 12pt;
+    }
+
+    .confirmation_window {
+        width: 90%;
+        padding: 50px 35px;
+    }
+
+    .confirmation_window h2 {
+        font-size: 20pt;
+    }
+}
+
+/* PHONE MEDIA QUERY */
+@media screen and (min-width: 500px) and (max-width: 649px) {
+    body {
+        padding: 50px 0px;
+        background-image: unset;
+    }
+
+    #content_div {
+        flex-direction: column;
+    }
+
+    #back_btn {
+        margin: auto auto 25px 25px;
+        padding: 5px 25px;
+        font-size: 20pt;
+    }
+
+    #confirmation_div {
+        width: 100%;
+        height: 575px;
+        padding: 50px 35px;
+        border-width: 20px;
+    }
+
+    #confirmation_div h1 {
+        top: 15px;
+        right: 20px;
+        font-size: 18pt;
+    }
+
+    #confirmation_div img {
+        right: -30px;
+        bottom: -30px;
+    }
+
+    @keyframes shoe_appear {
+        from {
+            bottom: -600px;
+            transform: rotate(-360deg);
+        }
+        to {
+            bottom: -30px;
+            transform: rotate(-7.5deg);
+        }
+    }
+
+    #text_div {
+        top: 20px;
+    }
+
+    @keyframes text_appear {
+        from {
+            top: -550px;
+        }
+        to {
+            top: 20px;
+        }
+    }
+
+    #text_div h2 {
+        font-size: 16pt;
+    }
+
+    #data_div p {
+        margin: 15px auto auto 25px;
+        font-size: 12pt;
+    }
+
+    #confirm_order {
+        bottom: 75px;
+        left: 35px;
+        width: 150px;
+        padding: 15px;
+        font-size: 12pt;
+    }
+
+    @keyframes confirm_appear {
+        from {
+            left: -750px;
+            transform: rotate(-360deg);
+        }
+        to {
+            left: 35px;
+        }
+    }
+
+    .confirmation_window {
+        width: 95%;
+        padding: 75px 35px;
+    }
+
+    .confirmation_window h2 {
+        font-size: 18pt;
+    }
+
+    .confirmation_window p {
+        width: 350px;
+        margin: 25px auto 50px auto;
+    }
+
+    #ending_msg {
+        margin-top: 15px;
+    }
+}
+
+/* PHONE MEDIA QUERY */
+@media screen and (min-width: 350px) and (max-width: 499px) {
+    body {
+        padding: 0px;
+        background-image: unset;
+    }
+
+    #content_div {
+        flex-direction: column;
+    }
+
+    #back_btn {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        width: 75px;
+        padding: 2.5px 15px;
+        color: var(--red);
+        background-color: var(--white);
+        z-index: 4;
+    }
+
+    #back_btn:hover {
+        color: var(--white);
+        background-color: var(--black);
+    }
+
+    #confirmation_div {
+        width: 100%;
+        height: 100vh;
+        padding: 40px 15px;
+        text-align: center;
+        border-width: 3px;
+    }
+
+    #confirmation_div h1 {
+        position: relative;
+        top: 20px;
+        right: unset;
+        font-size: 24pt;
+    }
+
+    #confirmation_div img {
+        position: relative;
+        right: 0px;
+        bottom: 0px;
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+
+    @keyframes shoe_appear {
+        from {
+            right: -500px;
+            transform: rotate(-360deg);
+        }
+        to {
+            right: 0px;
+            transform: rotate(-7.5deg);
+        }
+    }
+
+    #text_div {
+        position: relative;
+        left: 0px;
+        width: 100%;
+        margin: 60px auto 25px auto;
+    }
+
+    @keyframes text_appear {
+        from {
+            left: -500px;
+        }
+        to {
+            left: 0px;
+        }
+    }
+
+    #text_div h2 {
+        font-size: 16pt;
+        text-align: center;
+    }
+
+    #data_div {
+        width: auto;
+        margin: 10px auto auto auto;
+    }
+
+    #data_div p {
+        margin: auto;
+        font-size: 12pt;
+    }
+
+    #confirm_order {
+        position: relative;
+        bottom: 0px;
+        left: unset;
+        width: 150px;
+        margin: 20px auto auto auto;
+        padding: 15px;
+        font-size: 12pt;
+    }
+
+    @keyframes confirm_appear {
+        from {
+            bottom: -500px;
+            transform: rotate(-360deg);
+        }
+        to {
+            bottom: 0px;
+        }
+    }
+
+    .confirmation_window {
+        width: 100%;
+        padding: 50px 35px;
+        border-radius: unset;
+    }
+
+    .confirmation_window h2 {
+        font-size: 18pt;
+    }
+
+    .confirmation_window p {
+        width: auto;
+        margin: 25px auto 50px auto;
+        line-height: 25px;
+    }
+
+    #ending_msg {
+        margin-top: 15px;
+    }
+}
