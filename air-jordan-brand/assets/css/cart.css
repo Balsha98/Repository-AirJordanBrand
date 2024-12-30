@@ -1,0 +1,565 @@
+@import url("home.css");
+
+/* GLOBAL STYLE */
+body {
+    padding: 50px 75px;
+    background-image: url("../media/images/mj_clap.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#content_div {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+/* BACK_BTN STYLE */
+#back_btn {
+    width: 100px;
+    padding: 10px 25px;
+    font-size: 16pt;
+    color: var(--moreTransWhite);
+    background-color: var(--transparentRed);
+    border-radius: 50px;
+    transition: all 0.5s;
+}
+
+#back_btn:hover {
+    color: var(--white);
+    background-color: var(--red);
+    transform: translateX(-5px);
+}
+
+/* ORDER_DIV STYLE */
+#confirmation_div {
+    position: relative;
+    width: 85%;
+    height: 625px;
+    padding: 50px;
+    background-color: var(--lessTransRed);
+    border: 50px solid var(--white);
+    z-index: 3;
+}
+
+#confirmation_div h1 {
+    position: absolute;
+    top: 25px;
+    right: 50px;
+    font-size: 32pt;
+}
+
+#confirmation_div img {
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 75%;
+    animation-name: shoe_appear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    transform: rotate(-7.5deg);
+    z-index: 4;
+}
+
+@keyframes shoe_appear {
+    from {
+        bottom: -600px;
+        transform: rotate(-360deg);
+    }
+    to {
+        bottom: -50px;
+        transform: rotate(-7.5deg);
+    }
+}
+
+#text_div {
+    position: relative;
+    top: 0px;
+    animation-name: text_appear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+}
+
+@keyframes text_appear {
+    from {
+        top: -550px;
+    }
+    to {
+        top: 0px;
+    }
+}
+
+#text_div h2 {
+    font-size: 24pt;
+}
+
+#data_div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 240px;
+}
+
+#data_div p {
+    margin: 20px auto auto 25px;
+    font-size: 16pt;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+#data_div p:nth-child(2) {
+    font-weight: normal;
+    text-align: right;
+}
+
+#confirm_order {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    width: 200px;
+    padding: 15px 35px;
+    font-size: 14pt;
+    color: var(--red);
+    background-color: var(--white);
+    border-style: none;
+    border-radius: 25px;
+    animation-name: confirm_appear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    cursor: pointer;
+    transition: all 0.75s;
+}
+
+@keyframes confirm_appear {
+    from {
+        left: -750px;
+        transform: rotate(-360deg);
+    }
+    to {
+        left: 50px;
+    }
+}
+
+#confirm_order:hover {
+    color: var(--white);
+    background-color: var(--red);
+    box-shadow: 0px 0px 35px var(--white);
+    transform: translateY(5px);
+}
+
+/* POP_UP WINDOW STYLE */
+.confirmation_window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 75px;
+    text-align: center;
+    background-color: var(--black);
+    box-shadow: 0px 0px 50px var(--black);
+    border-radius: 25px;
+    transition: all 0.5s;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    z-index: 4;
+}
+
+.window_overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    transition: all 0.5s;
+    opacity: 1;
+    z-index: 4;
+}
+
+.hidden_window {
+    opacity: 0;
+    z-index: -1;
+}
+
+.confirmation_window h2 {
+    font-size: 24pt;
+}
+
+.confirmation_window p {
+    margin: 50px auto;
+    line-height: 30px;
+}
+
+#ending_msg {
+    display: block;
+    margin-top: 10px;
+    font-size: 16pt;
+}
+
+#home_btn {
+    padding: 10px 25px;
+    font-size: 14pt;
+    background-color: var(--red);
+    border-radius: 25px;
+    transition: all 0.5s;
+}
+
+#home_btn:hover {
+    box-shadow: 0px 0px 25px var(--white);
+    transform: translateY(5px);
+}
+
+/* TABLET MEDIA QUERY */
+@media screen and (min-width: 950px) and (max-width: 1250px) {
+    body {
+        padding: 35px 50px;
+    }
+
+    #content_div {
+        flex-direction: column;
+    }
+
+    #back_btn {
+        margin-bottom: 25px;
+    }
+
+    #confirmation_div {
+        width: 100%;
+        height: 575px;
+        border-width: 35px;
+    }
+
+    #confirmation_div h1 {
+        right: 35px;
+        font-size: 24pt;
+    }
+
+    #text_div h2 {
+        font-size: 20pt;
+    }
+
+    #data_div p {
+        font-size: 14pt;
+    }
+
+    #confirm_order {
+        width: 175px;
+        padding: 15px 25px;
+        font-size: 12pt;
+    }
+
+    .confirmation_window {
+        width: 70%;
+    }
+
+    .confirmation_window h2 {
+        font-size: 22pt;
+    }
+}
+
+/* TABLET MEDIA QUERY */
+@media screen and (min-width: 650px) and (max-width: 949px) {
+    body {
+        padding: 35px 0px;
+        background-image: unset;
+    }
+
+    #content_div {
+        flex-direction: column;
+    }
+
+    #back_btn {
+        margin: auto auto 25px 25px;
+    }
+
+    #confirmation_div {
+        width: 100%;
+        height: 575px;
+        border-width: 25px;
+    }
+
+    #confirmation_div h1 {
+        top: 25px;
+        right: 35px;
+        font-size: 20pt;
+    }
+
+    #confirmation_div img {
+        right: -30px;
+        bottom: -30px;
+    }
+
+    @keyframes shoe_appear {
+        from {
+            bottom: -600px;
+            transform: rotate(-360deg);
+        }
+        to {
+            bottom: -30px;
+            transform: rotate(-7.5deg);
+        }
+    }
+
+    #text_div h2 {
+        font-size: 18pt;
+    }
+
+    #data_div p {
+        font-size: 14pt;
+    }
+
+    #confirm_order {
+        width: 150px;
+        padding: 15px;
+        font-size: 12pt;
+    }
+
+    .confirmation_window {
+        width: 90%;
+        padding: 50px 35px;
+    }
+
+    .confirmation_window h2 {
+        font-size: 20pt;
+    }
+}
+
+/* PHONE MEDIA QUERY */
+@media screen and (min-width: 500px) and (max-width: 649px) {
+    body {
+        padding: 50px 0px;
+        background-image: unset;
+    }
+
+    #content_div {
+        flex-direction: column;
+    }
+
+    #back_btn {
+        margin: auto auto 25px 25px;
+        padding: 5px 25px;
+        font-size: 20pt;
+    }
+
+    #confirmation_div {
+        width: 100%;
+        height: 575px;
+        padding: 50px 35px;
+        border-width: 20px;
+    }
+
+    #confirmation_div h1 {
+        top: 15px;
+        right: 20px;
+        font-size: 18pt;
+    }
+
+    #confirmation_div img {
+        right: -30px;
+        bottom: -30px;
+    }
+
+    @keyframes shoe_appear {
+        from {
+            bottom: -600px;
+            transform: rotate(-360deg);
+        }
+        to {
+            bottom: -30px;
+            transform: rotate(-7.5deg);
+        }
+    }
+
+    #text_div {
+        top: 20px;
+    }
+
+    @keyframes text_appear {
+        from {
+            top: -550px;
+        }
+        to {
+            top: 20px;
+        }
+    }
+
+    #text_div h2 {
+        font-size: 16pt;
+    }
+
+    #data_div p {
+        margin: 15px auto auto 25px;
+        font-size: 12pt;
+    }
+
+    #confirm_order {
+        bottom: 75px;
+        left: 35px;
+        width: 150px;
+        padding: 15px;
+        font-size: 12pt;
+    }
+
+    @keyframes confirm_appear {
+        from {
+            left: -750px;
+            transform: rotate(-360deg);
+        }
+        to {
+            left: 35px;
+        }
+    }
+
+    .confirmation_window {
+        width: 95%;
+        padding: 75px 35px;
+    }
+
+    .confirmation_window h2 {
+        font-size: 18pt;
+    }
+
+    .confirmation_window p {
+        width: 350px;
+        margin: 25px auto 50px auto;
+    }
+
+    #ending_msg {
+        margin-top: 15px;
+    }
+}
+
+/* PHONE MEDIA QUERY */
+@media screen and (min-width: 350px) and (max-width: 499px) {
+    body {
+        padding: 0px;
+        background-image: unset;
+    }
+
+    #content_div {
+        flex-direction: column;
+    }
+
+    #back_btn {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        width: 75px;
+        padding: 2.5px 15px;
+        color: var(--red);
+        background-color: var(--white);
+        z-index: 4;
+    }
+
+    #back_btn:hover {
+        color: var(--white);
+        background-color: var(--black);
+    }
+
+    #confirmation_div {
+        width: 100%;
+        height: 100vh;
+        padding: 40px 15px;
+        text-align: center;
+        border-width: 3px;
+    }
+
+    #confirmation_div h1 {
+        position: relative;
+        top: 20px;
+        right: unset;
+        font-size: 24pt;
+    }
+
+    #confirmation_div img {
+        position: relative;
+        right: 0px;
+        bottom: 0px;
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+
+    @keyframes shoe_appear {
+        from {
+            right: -500px;
+            transform: rotate(-360deg);
+        }
+        to {
+            right: 0px;
+            transform: rotate(-7.5deg);
+        }
+    }
+
+    #text_div {
+        position: relative;
+        left: 0px;
+        width: 100%;
+        margin: 60px auto 25px auto;
+    }
+
+    @keyframes text_appear {
+        from {
+            left: -500px;
+        }
+        to {
+            left: 0px;
+        }
+    }
+
+    #text_div h2 {
+        font-size: 16pt;
+        text-align: center;
+    }
+
+    #data_div {
+        width: auto;
+        margin: 10px auto auto auto;
+    }
+
+    #data_div p {
+        margin: auto;
+        font-size: 12pt;
+    }
+
+    #confirm_order {
+        position: relative;
+        bottom: 0px;
+        left: unset;
+        width: 150px;
+        margin: 20px auto auto auto;
+        padding: 15px;
+        font-size: 12pt;
+    }
+
+    @keyframes confirm_appear {
+        from {
+            bottom: -500px;
+            transform: rotate(-360deg);
+        }
+        to {
+            bottom: 0px;
+        }
+    }
+
+    .confirmation_window {
+        width: 100%;
+        padding: 50px 35px;
+        border-radius: unset;
+    }
+
+    .confirmation_window h2 {
+        font-size: 18pt;
+    }
+
+    .confirmation_window p {
+        width: auto;
+        margin: 25px auto 50px auto;
+        line-height: 25px;
+    }
+
+    #ending_msg {
+        margin-top: 15px;
+    }
+}

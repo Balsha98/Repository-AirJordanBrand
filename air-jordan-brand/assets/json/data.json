@@ -1,0 +1,250 @@
+{
+    "0": {
+        "question": "Start off by selecting your preferred model.",
+        "options": ["Select Shoe", "Air Jordan 1s", "Air Jordan 11s"]
+    },
+    "1": {
+        "question": "What is your gender?",
+        "options": ["Select Gender", "Male", "Female"]
+    },
+    "11": {
+        "question": "Which colorway do you prefer?",
+        "options": ["Select Color", "Black", "Blue", "Orange"]
+    },
+    "111": {
+        "question": "What shoe-size do you need?",
+        "options": ["Select Size", "US: 11", "US: 12", "US: 13"]
+    },
+    "1111": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "11111": { "img": "assets/media/images/one-black-high.png" },
+    "11112": { "img": "assets/media/images/one-black-low.png" },
+    "1112": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "11121": { "img": "assets/media/images/one-black-high.png" },
+    "11122": { "img": "assets/media/images/one-black-low.png" },
+    "1113": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "11131": { "img": "assets/media/images/one-black-high.png" },
+    "11132": { "img": "assets/media/images/one-black-low.png" },
+    "112": {
+        "question": "What shoe-size do you need?",
+        "options": ["Select Size", "US: 11", "US: 12", "US: 13"]
+    },
+    "1121": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "11211": { "img": "assets/media/images/one-blue-high.png" },
+    "11212": { "img": "assets/media/images/one-blue-low.png" },
+    "1122": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "11221": { "img": "assets/media/images/one-blue-high.png" },
+    "11222": { "img": "assets/media/images/one-blue-low.png" },
+    "1123": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "11231": { "img": "assets/media/images/one-blue-high.png" },
+    "11232": { "img": "assets/media/images/one-blue-low.png" },
+    "113": {
+        "question": "What shoe-size do you need?",
+        "options": ["Select Size", "US: 11", "US: 12", "US: 13"]
+    },
+    "1131": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "11311": { "img": "assets/media/images/one-orange-high.png" },
+    "11312": { "img": "assets/media/images/one-orange-low.png" },
+    "1132": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "11321": { "img": "assets/media/images/one-orange-high.png" },
+    "11322": { "img": "assets/media/images/one-orange-low.png" },
+    "1133": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "11331": { "img": "assets/media/images/one-orange-high.png" },
+    "11332": { "img": "assets/media/images/one-orange-low.png" },
+    "12": {
+        "question": "Which colorway do you prefer?",
+        "options": ["Select Color", "Pink", "Purple", "Yellow"]
+    },
+    "121": {
+        "question": "What shoe-size do you need?",
+        "options": ["Select Size", "US: 7", "US: 8", "US: 9"]
+    },
+    "1211": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "12111": { "img": "assets/media/images/one-pink-high.png" },
+    "12112": { "img": "assets/media/images/one-pink-low.png" },
+    "1212": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "12121": { "img": "assets/media/images/one-pink-high.png" },
+    "12122": { "img": "assets/media/images/one-pink-low.png" },
+    "1213": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "12131": { "img": "assets/media/images/one-pink-high.png" },
+    "12132": { "img": "assets/media/images/one-pink-low.png" },
+    "122": {
+        "question": "What shoe-size do you need?",
+        "options": ["Select Size", "US: 7", "US: 8", "US: 9"]
+    },
+    "1221": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "12211": { "img": "assets/media/images/one-purple-high.png" },
+    "12212": { "img": "assets/media/images/one-purple-low.png" },
+    "1222": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "12221": { "img": "assets/media/images/one-purple-high.png" },
+    "12222": { "img": "assets/media/images/one-purple-low.png" },
+    "1223": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "12231": { "img": "assets/media/images/one-purple-high.png" },
+    "12232": { "img": "assets/media/images/one-purple-low.png" },
+    "123": {
+        "question": "What shoe-size do you need?",
+        "options": ["Select Size", "US: 7", "US: 8", "US: 9"]
+    },
+    "1231": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "12311": { "img": "assets/media/images/one-yellow-high.png" },
+    "12312": { "img": "assets/media/images/one-yellow-low.png" },
+    "1232": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "12321": { "img": "assets/media/images/one-yellow-high.png" },
+    "12322": { "img": "assets/media/images/one-yellow-low.png" },
+    "1233": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "12331": { "img": "assets/media/images/one-yellow-high.png" },
+    "12332": { "img": "assets/media/images/one-yellow-low.png" },
+    "2": {
+        "question": "What is your gender?",
+        "options": ["Select Gender", "Male", "Female"]
+    },
+    "21": {
+        "question": "Which colorway do you prefer?",
+        "options": ["Select Color", "Black", "Red"]
+    },
+    "211": {
+        "question": "What shoe-size do you need?",
+        "options": ["Select Size", "US: 12", "US: 13", "US: 14"]
+    },
+    "2111": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "21111": { "img": "assets/media/images/eleven-black-high.png" },
+    "21112": { "img": "assets/media/images/eleven-black-low.png" },
+    "2112": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "21121": { "img": "assets/media/images/eleven-black-high.png" },
+    "21122": { "img": "assets/media/images/eleven-black-low.png" },
+    "2113": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "21131": { "img": "assets/media/images/eleven-black-high.png" },
+    "21132": { "img": "assets/media/images/eleven-black-low.png" },
+    "212": {
+        "question": "What shoe-size do you need?",
+        "options": ["Select Size", "US: 12", "US: 13", "US: 14"]
+    },
+    "2121": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "21211": { "img": "assets/media/images/eleven-red-high.png" },
+    "21212": { "img": "assets/media/images/eleven-red-low.png" },
+    "2122": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "21221": { "img": "assets/media/images/eleven-red-high.png" },
+    "21222": { "img": "assets/media/images/eleven-red-low.png" },
+    "2123": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "21231": { "img": "assets/media/images/eleven-red-high.png" },
+    "21232": { "img": "assets/media/images/eleven-red-low.png" },
+    "22": {
+        "question": "Which colorway do you prefer?",
+        "options": ["Select Color", "White", "Grey"]
+    },
+    "221": {
+        "question": "What shoe-size do you need?",
+        "options": ["Select Size", "US: 7.5", "US: 8", "US: 8.5"]
+    },
+    "2211": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "22111": { "img": "assets/media/images/eleven-white-high.png" },
+    "22112": { "img": "assets/media/images/eleven-white-low.png" },
+    "2212": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "22121": { "img": "assets/media/images/eleven-white-high.png" },
+    "22122": { "img": "assets/media/images/eleven-white-low.png" },
+    "2213": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "22131": { "img": "assets/media/images/eleven-white-high.png" },
+    "22132": { "img": "assets/media/images/eleven-white-low.png" },
+    "222": {
+        "question": "What shoe-size do you need?",
+        "options": ["Select Size", "US: 7.5", "US: 8", "US: 8.5"]
+    },
+    "2221": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "22211": { "img": "assets/media/images/eleven-grey-high.png" },
+    "22212": { "img": "assets/media/images/eleven-grey-low.png" },
+    "2222": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "22221": { "img": "assets/media/images/eleven-grey-high.png" },
+    "22222": { "img": "assets/media/images/eleven-grey-low.png" },
+    "2223": {
+        "question": "What is your preferred shoe depth?",
+        "options": ["Select Depth", "High-Top", "Low-Top"]
+    },
+    "22231": { "img": "assets/media/images/eleven-grey-high.png" },
+    "22232": { "img": "assets/media/images/eleven-grey-low.png" }
+}
