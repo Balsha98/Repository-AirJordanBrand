@@ -1,4 +1,5 @@
-"use strict";
+import { possibleOptions } from "./options.js";
+import { createCookie } from "./cookie.js";
 
 // ***** DOM ELEMENTS ***** //
 const pageHeader = document.querySelector(".page-header");
@@ -86,7 +87,7 @@ const createParagraph = function (question) {
 const createSelectBox = function (options) {
     const selectBox = document.createElement("select");
     selectBox.setAttribute("class", "new-select-box");
-    selectBox.setAttribute("onchange", "switchBox();");
+    selectBox.addEventListener("change", switchBox);
 
     for (let i = 0; i < options.length; i++) {
         const option = document.createElement("option");

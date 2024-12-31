@@ -1,4 +1,4 @@
-"use strict";
+import { deleteCookie, getCookie } from "./cookie.js";
 
 const singleObject = (idClass) => document.querySelector(idClass);
 const multipleObjects = (idClass) => document.querySelectorAll(idClass);
