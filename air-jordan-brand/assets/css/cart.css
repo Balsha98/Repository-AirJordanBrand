@@ -1,9 +1,10 @@
+/* IMPORTS */
 @import url("home.css");
 
-/* GLOBAL STYLE */
+/* GENERAL SELECTORS */
 body {
     padding: 50px 75px;
-    background-image: url("../media/images/mj_clap.png");
+    background-image: url("../media/images/mj-clap.png");
     background-size: cover;
     background-repeat: no-repeat;
 }

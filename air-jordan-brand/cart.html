@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="assets/css/cart-media-queries.css">
     <script src="assets/js/cookie.js" defer></script>
     <script src="assets/js/order.js" defer></script>
-    <title>Cart | Air Jordan Brand</title>
+    <title>Air Jordan Brand | Cart</title>
 </head>
 
 <body>
-    <div class="photo-overlay"></div>
+    <div class="photo-overlay">&nbsp;</div>
 
-    <div class="content-div">
+    <section class="content-div">
         <a href="index.html" class="back-btn">&#10229;</a>
         <div class="confirmation-div">
             <h1>Your Cart</h1>
@@ -39,11 +39,9 @@
             </div>
             <button class="confirm-order">Confirm Order</button>
         </div>
-    </div>
+    </section>
 
-    <div class="window-overlay hidden-window"></div>
-
-    <section class="confirmation-window hidden-window">
+    <div class="confirmation-window hidden-window">
         <h2>Order Successful!</h2>
         <p>
             Your order has been confirmed and
@@ -51,7 +49,12 @@
             <span class="ending-msg">Thank you for choosing Air Jordan!</span>
         </p>
         <a href="index.html" class="home-btn">Home</a>
-    </section>
+    </div>
+
+    <div class="window-overlay hidden-window"></div>
+
+    <!-- ICON SCRIPT -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>
 
 </html>
