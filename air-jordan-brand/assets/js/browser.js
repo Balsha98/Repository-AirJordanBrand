@@ -45,7 +45,7 @@ const minBrowVs = [
                         window.open("https://www.mozilla.org/en-US/firefox/new/");
                     }
 
-                    const isOkay = version >= currVersion ? "Unsupported!" : "Supported!";
+                    const isOkay = version >= currVersion ? "Unsupported." : "Supported.";
                     console.log(`${isOkay}\n\tBrowser: ${currName}\n\tVersion: ${currVersion}`);
                     numValid++;
                 }

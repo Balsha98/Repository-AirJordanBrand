@@ -1,42 +1,42 @@
 "use strict";
 
-// TAG SELECTOR FUNCTIONS
-const singleObject = (idClass) => document.querySelector(idClass);
-const multipleObjects = (idClass) => document.querySelectorAll(idClass);
+// ***** DOM ELEMENTS ***** //
+const pageHeader = document.querySelector(".page-header");
+const pageNavContainer = document.querySelector(".div-page-nav-container");
+const getStartedBtn = document.querySelector(".btn-get-started");
+const contentSections = document.querySelectorAll(".section");
+const galleryImages = document.querySelectorAll(".gallery-image");
+const selectContainer = document.querySelector(".div-select-container");
+const toTopBtn = document.querySelector(".div-btn-container");
 
-// NAV BAR VARIABLES
-const navLinksDiv = singleObject("#nav_links_div");
-const menuBar = singleObject("#menu_bar");
-const closeBtn = singleObject("#close_btn");
+// ***** VARIABLES ***** //
+let currBox;
+const currKey = [];
+const userChoices = [];
+const selectBoxes = [];
+const boxTopics = ["shoe", "gender", "color", "size", "depth"];
 
-// SELECT DIV VARIABLES
-const getStarted = singleObject(".start_select");
-const selectDiv = singleObject(".select_div");
-
-// INTERSECTION OBSERVER (NAVIGATION)
-const pageNavContainer = singleObject(".div-page-nav-container");
-const toTopBtn = singleObject(".div_to_top");
+// ***** OBSERVERS ***** //
+// Page navigation observer.
 const navObserver = new IntersectionObserver(
     function (entry) {
         const { isIntersecting } = entry[0];
 
         if (isIntersecting) {
             pageNavContainer.classList.remove("fixed-nav-container");
-            toTopBtn.classList.add("to_top_appear");
+            toTopBtn.classList.add("y-appear");
             return;
         }
 
         pageNavContainer.classList.add("fixed-nav-container");
-        toTopBtn.classList.remove("to_top_appear");
+        toTopBtn.classList.remove("y-appear");
     },
     { root: null, threshold: 0 }
 );
 
-const pageHeader = singleObject(".page-header");
 navObserver.observe(pageHeader);
 
-// INTERSECTION OBSERVER (CONTENT SECTIONS)
-const sectionElements = multipleObjects(".section");
+// Content sections observer.
 const secObserver = new IntersectionObserver(
     function (entry, observer) {
         const { target, isIntersecting } = entry[0];
@@ -49,41 +49,33 @@ const secObserver = new IntersectionObserver(
     { root: null, threshold: 0.1 }
 );
 
-sectionElements.forEach((section) => {
-    section.classList.add("section_fade_in");
+contentSections.forEach((section) => {
+    section.classList.add("fade-in");
     secObserver.observe(section);
 });
 
-// INTERSECTION OBSERVER (IMG LOADER)
-const flexImages = multipleObjects(".flex_img");
+// Gallery images observer.
 const imageObserver = new IntersectionObserver(
     function (entry, observer) {
         const { target, isIntersecting } = entry[0];
 
         if (isIntersecting) {
-            target.classList.remove("img_blur");
+            target.classList.remove("image-blur");
             observer.unobserve(target);
         }
     },
     { root: null, threshold: 1 }
 );
 
-flexImages.forEach((img) => {
-    img.classList.add("img_blur");
+galleryImages.forEach((img) => {
+    img.classList.add("image-blur");
     imageObserver.observe(img);
 });
 
-// SELECT BOX LOGIC
-let currBox;
-const currKey = [];
-const userChoices = [];
-const selectBoxes = [];
-const boxTopics = ["shoe", "gender", "color", "size", "depth"];
-
-// PARAGRAPH FACTORY METHOD
+// ***** FUNCTIONS ***** //
 const createParagraph = function (question) {
     const pTag = document.createElement("p");
-    pTag.setAttribute("class", "question");
+    pTag.classList.add("text-question-confirmation");
 
     const pTxt = document.createTextNode(question);
     pTag.appendChild(pTxt);
@@ -91,10 +83,9 @@ const createParagraph = function (question) {
     return pTag;
 };
 
-// SELECT BOX FACTORY METHOD
 const createSelectBox = function (options) {
     const selectBox = document.createElement("select");
-    selectBox.setAttribute("class", "select_box");
+    selectBox.setAttribute("class", "new-select-box");
     selectBox.setAttribute("onchange", "switchBox();");
 
     for (let i = 0; i < options.length; i++) {
@@ -108,12 +99,11 @@ const createSelectBox = function (options) {
     return selectBox;
 };
 
-// ANCHOR FACTORY METHOD
 const createAnchor = function () {
     const anchorTag = document.createElement("a");
     anchorTag.setAttribute("href", "cart.html");
     anchorTag.setAttribute("onclick", "saveShoeInfo();");
-    anchorTag.classList.add("btn_confirm");
+    anchorTag.classList.add("btn-confirm-selection");
 
     const btnTxt = document.createTextNode("Confirm");
     anchorTag.appendChild(btnTxt);
@@ -121,28 +111,23 @@ const createAnchor = function () {
     return anchorTag;
 };
 
-// CHECKING # OF SELECT BOXES
 const checkNumBoxes = function (sBoxes, bTopics) {
-    if (sBoxes.length > bTopics.length) {
-        return true;
-    } else if (sBoxes.length === bTopics.length) {
+    if (sBoxes.length > bTopics.length) return true;
+    else if (sBoxes.length === bTopics.length) {
         const finalQuestion = "Are you sure about your choices?";
-        selectDiv.appendChild(createParagraph(finalQuestion));
-        selectDiv.appendChild(createAnchor());
+        selectContainer.appendChild(createParagraph(finalQuestion));
+        selectContainer.appendChild(createAnchor());
         return true;
     }
 };
 
-// SELECT BOX REMOVAL METHOD
 const removeBox = function (sBox) {
     let nextChild = sBox.nextSibling;
 
     while (nextChild) {
-        if (nextChild.classList.contains("select_box")) {
-            selectBoxes.pop();
-        }
+        if (nextChild.classList.contains("new-select-box")) selectBoxes.pop();
 
-        if (!nextChild.classList.contains("question")) {
+        if (!nextChild.classList.contains("text-question-confirmation")) {
             userChoices.pop();
             currKey.pop();
         }
@@ -152,11 +137,8 @@ const removeBox = function (sBox) {
     }
 };
 
-// SELECT BOX SWITCHING
 const switchBox = function () {
-    if (currBox.nextSibling) {
-        removeBox(currBox);
-    }
+    if (currBox.nextSibling) removeBox(currBox);
 
     const parsedValue = parseInt(currBox.value);
 
@@ -174,11 +156,10 @@ const switchBox = function () {
     const newQuestion = createParagraph(question);
     const newBox = createSelectBox(options);
 
-    selectDiv.appendChild(newQuestion);
-    selectBoxes.push(selectDiv.appendChild(newBox));
+    selectContainer.appendChild(newQuestion);
+    selectBoxes.push(selectContainer.appendChild(newBox));
 };
 
-// SHOE INFO COOKIE SAVING
 const saveShoeInfo = function () {
     for (let i = 0; i < boxTopics.length; i++) {
         createCookie(boxTopics[i], userChoices[i]);
@@ -188,32 +169,17 @@ const saveShoeInfo = function () {
     createCookie("img", img);
 };
 
-// EVENT LISTENERS
-menuBar.addEventListener("click", function () {
-    navLinksDiv.classList.remove("hide_nav_links_div");
-});
-
-navLinksDiv.addEventListener("click", function (event) {
-    const navLink = event.target;
-
-    if (navLink.classList.contains("nav_link")) {
-        navLinksDiv.classList.add("hide_nav_links_div");
-    }
-});
-
-getStarted.addEventListener("click", function () {
+// ***** EVENT LISTENERS ***** //
+getStartedBtn.addEventListener("click", function () {
     const { question, options } = possibleOptions["0"];
-    selectDiv.appendChild(createParagraph(question));
-    selectBoxes.push(selectDiv.appendChild(createSelectBox(options)));
+    selectContainer.appendChild(createParagraph(question));
+    selectBoxes.push(selectContainer.appendChild(createSelectBox(options)));
 
-    selectDiv.classList.remove("hide_element");
-    this.classList.add("hide_element");
+    selectContainer.classList.remove("hide-element");
+    this.classList.add("hide-element");
 });
 
-selectDiv.addEventListener("click", function (event) {
+selectContainer.addEventListener("click", function (event) {
     const selectBox = event.target;
-
-    if (selectBox.classList.contains("select_box")) {
-        currBox = selectBox;
-    }
+    if (selectBox.classList.contains("new-select-box")) currBox = selectBox;
 });
