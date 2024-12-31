@@ -1,29 +1,18 @@
+/* IMPORTS */
 @import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
 
-/* GLOBAL VARIABLES & SELECTORS */
+/* VARIABLES */
 :root {
-    --black: black;
-    --white: white;
-    --transparentWhite: rgba(255, 255, 255, 0.75);
-    --moreTransWhite: rgba(255, 255, 255, 0.675);
-    --red: rgb(186, 66, 66);
-    --transparentRed: rgba(186, 66, 66, 0.75);
-    --lessTransRed: rgba(186, 66, 66, 0.85);
+    --white: #fff;
+    --black: #000;
+    --transparent-white: rgba(255, 255, 255, 0.8);
+    --more-trans-red: rgba(255, 255, 255, 0.6);
+    --red: #ba4242;
+    --transparent-red: rgba(186, 66, 66, 0.8);
+    --less-transparent-red: rgba(186, 66, 66, 0.9);
 }
 
-html {
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-body {
-    background-color: var(--black);
-}
-
+/* GENERAL SELECTORS */
 * {
     margin: 0px;
     padding: 0px;
@@ -33,231 +22,161 @@ body {
     box-sizing: border-box;
 }
 
-/* NAV STYLE */
-nav {
+html {
+    font-size: 10px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--black);
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* PAGE NAV CONTAINER */
+.div-page-nav-container {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: absolute;
-    top: 0px;
-    left: 0px;
     width: 100%;
-    padding: 10px 75px;
-    background-color: var(--transparentWhite);
+    padding: 1.2rem 6.4rem;
+    background-color: var(--transparent-white);
     z-index: 2;
 }
 
-.fixed_nav {
+.div-page-nav-container img {
+    height: 8rem;
+}
+
+.fixed-nav-container {
     position: fixed;
     z-index: 4;
 }
 
-#nav_logo {
-    width: 200px;
-}
-
-#nav_links_div {
+/* NAVIGATION LINKS LIST */
+.page-nav-links-list {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 550px;
-    transition: all 1s;
+    gap: 3.2rem;
+    list-style: none;
 }
 
-a {
-    text-align: center;
-}
-
-#nav_links_div a {
-    font-size: 16pt;
+.page-nav-links-list-item a:link,
+.page-nav-links-list-item a:visited {
+    display: inline-block;
+    font-size: 2rem;
     color: var(--black);
     transition: all 0.5s;
 }
 
-#nav_links_div a:nth-child(5) {
-    padding: 10px 45px;
+.page-nav-links-list-item:last-child a:link,
+.page-nav-links-list-item:last-child a:visited {
+    padding: 0.8rem 3.2rem;
     color: var(--white);
-    background-color: var(--red);
-    box-shadow: 0px 0px 25px var(--black);
-    border-style: none;
-    border-radius: 50px;
+    background-color: var(--less-transparent-red);
+    box-shadow: inset 0 0 0 0.2rem var(--white);
+    border-radius: 0.4rem;
 }
 
-#nav_links_div a:hover {
-    opacity: 0.5;
-    cursor: pointer;
-    transform: translateY(5px);
-}
-
-#menu_bar {
-    display: none;
-    font-size: 36pt;
-    font-weight: bold;
-    color: var(--black);
-    transition: all 0.5s;
-    cursor: pointer;
-}
-
-#menu_bar:hover {
-    color: var(--red);
-}
-
-#close_btn {
-    position: absolute;
-    top: 0px;
-    right: 25px;
-    display: none;
-    font-size: 36pt;
-    font-weight: bold;
-    color: var(--white);
-    transition: all 0.5s;
-    cursor: pointer;
-}
-
-#close_btn:hover {
-    color: var(--black);
+.page-nav-links-list-item a:hover,
+.page-nav-links-list-item a:active {
+    transform: translateY(0.2rem);
+    opacity: 0.4;
 }
 
 /* VIDEO STYLE */
-#video_div {
-    position: relative;
-    width: auto;
-    height: auto;
-}
-
-.photo_overlay {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(1.5px);
-    z-index: 1;
-}
-
-video {
+.div-hero-video-container {
     position: relative;
     width: 100%;
     height: 100vh;
-    z-index: -1;
 }
 
-#arrow_div {
+.div-hero-video-container video {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    z-index: 0;
+}
+
+.blur-overlay {
     position: absolute;
-    left: 50%;
-    padding: 10px 60px;
-    background-color: var(--white);
-    border-radius: 50px;
-    animation: scroll_arrow;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-    transition: all 0.5s;
-    transform: translate(-50%);
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    backdrop-filter: blur(0.2rem);
     z-index: 1;
 }
 
-#scroll_arrow {
-    display: block;
-    width: 30px;
-    margin: auto;
-}
-
-@keyframes scroll_arrow {
-    0% {
-        bottom: 50px;
-        box-shadow: 0px 0px 0px var(--black);
-        opacity: 0.25;
-    }
-    100% {
-        bottom: 25px;
-        box-shadow: 0px 0px 150px var(--black);
-        opacity: 0.75;
-    }
-}
-
-/* SECTIONS STYLE */
-h1 {
-    text-align: center;
-}
-
+/* SECTIONS */
 .section {
+    position: relative;
     transition: all 2s;
 }
 
-.section_fade_in {
+.fade-in {
     transform: translateY(200px);
     opacity: 0;
 }
 
-.bg_img {
+/* BACKGROUND IMAGE CONTAINER DIV */
+.div-background-image-container {
     position: relative;
     width: 100%;
-    height: 120vh;
-    background-repeat: no-repeat;
-    background-position: center;
+    height: 100vh;
     opacity: 0.75;
     z-index: 0;
 }
 
-.bg1 {
-    background-image: url("../media/images/mj_last_shot.png");
-}
-
-.bg2 {
-    background-image: url("../media/images/mj_back.png");
-}
-
-.bg_section {
-    position: relative;
-}
-
-.desc_div {
+.text-image-description {
     position: absolute;
-    top: 0px;
-    right: 0px;
-    padding: 20px 75px;
+    top: 0;
+    right: 0;
+    padding: 1.2rem 6.4rem;
+    font-size: 2.4rem;
     background-color: var(--black);
-    box-shadow: 0px 0px 25px var(--black);
+    box-shadow: 0 0.4rem 1.2rem var(--black);
     z-index: 3;
 }
 
-.desc_div h1 {
-    font-size: 32pt;
-}
-
-.desc_left {
-    left: 0px;
-    right: auto;
-}
-
-.img_tag {
+.span-image-tag {
     position: absolute;
     bottom: 0;
     left: 0;
-    font-size: 12pt;
-    padding: 15px 45px;
+    padding: 1.6rem 3.2rem;
+    font-size: 2rem;
     background-color: var(--black);
-    box-shadow: 0px 0px 25px var(--black);
+    box-shadow: 0 -0.4rem 1.2rem var(--black);
     z-index: 3;
 }
 
-.tag_right {
-    left: auto;
-    right: 0px;
+.div-background-image {
+    width: inherit;
+    height: inherit;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-#photo_section,
-#select_section {
-    margin: 200px 0px;
+.bg-img-1 {
+    background-image: url("../media/images/mj-last-shot.png");
 }
 
-#photo_section h1 {
-    font-size: 48pt;
+.bg-img-2 {
+    background-image: url("../media/images/mj-backward.png");
 }
 
-/* GALLERY STYLE */
+/* GALLERY SECTION */
+.section-header h1 {
+    font-size: 3.3rem;
+    text-align: center;
+}
+
 #grid_layout {
     display: grid;
     gap: 100px;
@@ -393,8 +312,8 @@ option:checked {
     margin: 40px auto auto auto;
     padding: 12.5px 0px;
     font-size: 18pt;
-    color: var(--transparentWhite);
-    background-color: var(--transparentRed);
+    color: var(--transparent-white);
+    background-color: var(--transparent-red);
     border-style: none;
     border-radius: 50px;
     transition: all 0.5s;

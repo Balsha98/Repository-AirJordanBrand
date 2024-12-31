@@ -15,125 +15,128 @@
 </head>
 
 <body>
-    <header class="top-of-page">
-        <nav class="navigation">
-            <img class="nav-logo" src="assets/media/images/air-jordan-logo.png" alt="Air Jordan Logo">
-            <div class="nav-links-div hide-nav-links-div">
-                <label class="close-btn" class="nav-link">&times;</label>
-                <a class="nav-link" href="#photo-section">Gallery</a>
-                <a class="nav-link" href="#select-section">Shoes</a>
-                <a class="nav-link" href="cart.html">Cart</a>
-                <a class="nav-link" href="#starting-off">Start Tour</a>
-            </div>
-            <label class="menu-bar">&#8801;</label>
-        </nav>
-        <div class="video-div">
-            <div class="photo-overlay"></div>
+    <header id="page-header" class="page-header">
+        <div class="div-page-nav-container">
+            <img src="assets/media/images/air-jordan-logo.png" alt="Air Jordan Logo">
+            <nav class="page-nav">
+                <ul class="page-nav-links-list">
+                    <li class="page-nav-links-list-item">
+                        <a href="#section-gallery">Gallery</a>
+                    </li>
+                    <li class="page-nav-links-list-item">
+                        <a href="#section-shoe-selection">Shoes</a>
+                    </li>
+                    <li class="page-nav-links-list-item">
+                        <a href="cart.html">Cart</a>
+                    </li>
+                    <li class="page-nav-links-list-item">
+                        <a href="#section-start">Start Tour</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="div-hero-video-container">
+            <div class="blur-overlay">&nbsp;</div>
             <video autoplay loop muted>
-                <source src="assets/media/videos/jordan-commercial.mp4" type="video/mp4">
+                <source type="video/mp4" src="assets/media/videos/jordan-commercial.mp4">
             </video>
         </div>
-        <a href="#starting-off">
-            <div class="arrow-div">
-                <img class="scroll-arrow" src="assets/media/images/scroll-arrow.png" alt="Scroll Arrow">
-            </div>
-        </a>
     </header>
 
-    <section id="starting-off" class="section">
-        <div class="bg-section">
-            <div class="desc-div">
-                <h1>Out of this world.</h1>
-            </div>
-            <div class="img-tag">
-                <h1>Game 6 of the 1998 NBA Finals.</h1>
-            </div>
-            <div class="photo-overlay"></div>
-            <div class="bg-img bg1"></div>
-        </div>
-    </section>
-
-    <section id="photo-section" class="section">
-        <h1>To be the best, you have to look your best.</h1>
-        <div class="grid-layout">
-            <div class="flex-div flex1 column">
-                <img class="left-img flex-img" src="assets/media/images/mj-young.png" alt="Young MJ">
-                <div class="info-div">
-                    <h2 class="info-heading"><em>"Coach, don't worry. I got this."</em></h2>
-                    <p>
-                        Micheal came in hungry and ready to put in the work needed to become one of the
-                        greatest that the game had ever seen. From day 1 he brought to the game his
-                        tenacity and unmatched competitive nature.
-                    </p>
+    <main class="main-container">
+        <section id="section-start" class="section section-background-image">
+            <p class="text-image-description">Out of this world.</p>
+            <span class="span-image-tag">Game 6 of the 1998 NBA Finals.</span>
+            <div class="div-background-image bg-img-1">&nbsp;</div>
+            <div class="blur-overlay">&nbsp;</div>
+        </section>
+        <section id="section-gallery" class="section section-info">
+            <header class="section-header">
+                <h1>To be the best, you have to look your best.</h1>
+            </header>
+            <div class="grid-layout">
+                <div class="flex-div flex1 column">
+                    <img class="left-img flex-img" src="assets/media/images/mj-young.png" alt="Young MJ">
+                    <div class="info-div">
+                        <h2 class="info-heading"><em>"Coach, don't worry. I got this."</em></h2>
+                        <p>
+                            Micheal came in hungry and ready to put in the work needed to become one of the
+                            greatest that the game had ever seen. From day 1 he brought to the game his
+                            tenacity and unmatched competitive nature.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex-div flex2 column-reverse">
+                    <div class="info-div">
+                        <h2 class="info-heading"><em>"Yeah, you got that right."</em></h2>
+                        <p>
+                            He was THE star everywhere he went, at any given moment, both on and off the
+                            court. He had, or better yet still has this special kind of "aura" that surrounds
+                            him; he had a special type of flare to his game.
+                        </p>
+                    </div>
+                    <img class="right-img flex-img" src="assets/media/images/mj-interview.png" alt="Top Dog">
+                </div>
+                <div class="flex-div flex3 column">
+                    <img class="left-img flex-img" src="assets/media/images/mj-black.png" alt="Old School">
+                    <div class="info-div">
+                        <h2 class="info-heading"><em>"Let me get to work now."</em></h2>
+                        <p>
+                            Jordan was the perfect representation of how a high-level athlete should approach
+                            his/her craft; he was relentless when it came to basketball. It seemed as if he
+                            never, ever, got tired. In the end, his mindset is what ultimately set him apart.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex-div flex4 column-reverse">
+                    <div class="info-div">
+                        <h2 class="info-heading"><em>"Hornacek, you gotta be kidding me."</em></h2>
+                        <p>
+                            What else can we say without repeating ourselves? The man literally could not be
+                            stopped. He put fear into his opponents' hearts; made sure to drop 50 and lock up
+                            on the other side of the court. Greatness, that's what it is.
+                        </p>
+                    </div>
+                    <img class="right-img flex-img" src="assets/media/images/mj-jeff.png" alt="Post-Up">
                 </div>
             </div>
-            <div class="flex-div flex2 column-reverse">
-                <div class="info-div">
-                    <h2 class="info-heading"><em>"Yeah, you got that right."</em></h2>
-                    <p>
-                        He was THE star everywhere he went, at any given moment, both on and off the
-                        court. He had, or better yet still has this special kind of "aura" that surrounds
-                        him; he had a special type of flare to his game.
-                    </p>
-                </div>
-                <img class="right-img flex-img" src="assets/media/images/mj-interview.png" alt="Top Dog">
+        </section>
+        <section class="section section-background-image">
+            <div class="desc-div desc-left">
+                <h1>No time to rest.</h1>
             </div>
-            <div class="flex-div flex3 column">
-                <img class="left-img flex-img" src="assets/media/images/mj-black.png" alt="Old School">
-                <div class="info-div">
-                    <h2 class="info-heading"><em>"Let me get to work now."</em></h2>
-                    <p>
-                        Jordan was the perfect representation of how a high-level athlete should approach
-                        his/her craft; he was relentless when it came to basketball. It seemed as if he
-                        never, ever, got tired. In the end, his mindset is what ultimately set him apart.
-                    </p>
-                </div>
+            <div class="img-tag tag-right">
+                <h1>The coldest one of them all.</h1>
             </div>
-            <div class="flex-div flex4 column-reverse">
-                <div class="info-div">
-                    <h2 class="info-heading"><em>"Hornacek, you gotta be kidding me."</em></h2>
-                    <p>
-                        What else can we say without repeating ourselves? The man literally could not be
-                        stopped. He put fear into his opponents' hearts; made sure to drop 50 and lock up
-                        on the other side of the court. Greatness, that's what it is.
-                    </p>
-                </div>
-                <img class="right-img flex-img" src="assets/media/images/mj-jeff.png" alt="Post-Up">
+            <div class="blur-overlay"></div>
+            <div class="bg-img bg2"></div>
+        </section>
+        <section id="select-section" class="section section-info">
+            <header class="section-header">
+                <h1>Let's get you suited and booted.</h1>
+            </header>
+            <button class="start-select">Get Started</button>
+            <div class="select-div hide-element">
+                <!-- DYNAMICALLY GENERATED SELECT BOXES -->
             </div>
+        </section>
+        <div class="div-to-top to-top-appear">
+            <a class="btn-to-top" href="#top-of-page">&#8593;</a>
         </div>
-    </section>
+        <footer class="section">
+            <div class="footer-links-div">
+                <a href="#top-of-page">Start</a>
+                <a href="#photo-section">Gallery</a>
+                <a href="#select-section">Shoes</a>
+                <a href="cart.html">Cart</a>
+            </div>
+            <img src="assets/media/images/jordan-logo.png" alt="Jordan Logo">
+            <p>&copy; 2024 | Air Jordan Brand | All rights reserved.</p>
+        </footer>
+    </main>
 
-    <section class="section bg-section">
-        <div class="desc-div desc-left">
-            <h1>No time to rest.</h1>
-        </div>
-        <div class="img-tag tag-right">
-            <h1>The coldest one of them all.</h1>
-        </div>
-        <div class="photo-overlay"></div>
-        <div class="bg-img bg2"></div>
-    </section>
-
-    <section id="select-section" class="section">
-        <h1>Let's get you suited and booted.</h1>
-        <button class="start-select">Get Started</button>
-        <div class="select-div hide-element"></div>
-    </section>
-
-    <div class="div-to-top to-top-appear">
-        <a class="btn-to-top" href="#top-of-page">&#8593;</a>
-    </div>
-
-    <footer class="section">
-        <div class="footer-links-div">
-            <a href="#top-of-page">Start</a>
-            <a href="#photo-section">Gallery</a>
-            <a href="#select-section">Shoes</a>
-            <a href="cart.html">Cart</a>
-        </div>
-        <img src="assets/media/images/jordan-logo.png" alt="Jordan Logo">
-        <p>&copy; 2024 | Air Jordan Brand | All rights reserved.</p>
-    </footer>
+    <!-- ICON SCRIPT -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>
 
 </html>
