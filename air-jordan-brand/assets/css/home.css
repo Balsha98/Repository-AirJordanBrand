@@ -125,8 +125,8 @@ body::-webkit-scrollbar {
     opacity: 0;
 }
 
-/* BACKGROUND IMAGE CONTAINER DIV */
-.div-background-image-container {
+/* BACKGROUND IMAGE SECTION */
+.section-background-image {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -163,82 +163,73 @@ body::-webkit-scrollbar {
     background-position: center;
 }
 
-.bg-img-1 {
+.background-image-1 {
     background-image: url("../media/images/mj-last-shot.png");
 }
 
-.bg-img-2 {
+.background-image-2 {
     background-image: url("../media/images/mj-backward.png");
 }
 
-/* GALLERY SECTION */
+/* INFO SECTION */
+.section-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    padding: 9.6rem 0;
+}
+
 .section-header h1 {
-    font-size: 3.3rem;
+    font-size: 4rem;
     text-align: center;
 }
 
-#grid_layout {
-    display: grid;
-    gap: 100px;
-    grid-template-columns: 100%;
-    grid-template-areas:
-        "flex1"
-        "flex2"
-        "flex3"
-        "flex4";
-    margin-top: 200px;
+.div-gallery-container {
+    display: inherit;
+    flex-direction: inherit;
+    gap: 8rem;
 }
 
-.flex_div {
-    display: flex;
+.div-flex-container {
+    display: inherit;
     align-items: center;
     justify-content: space-evenly;
 }
 
-.flex_img {
-    width: 45%;
-    transition: all 0.75s;
+.div-flex-container img {
+    width: 48%;
+    transition: all 0.5s;
 }
 
-.img_blur {
-    filter: blur(10px);
+.image-blur {
+    filter: blur(0.8rem);
 }
 
-.left_img {
-    box-shadow: -25px -25px 0px var(--white);
+.left-image-shadow {
+    box-shadow: -1.6rem -1.6rem 0 var(--white);
 }
 
-.right_img {
-    box-shadow: 25px -25px 0px var(--white);
+.right-image-shadow {
+    box-shadow: 1.6rem -1.6rem 0 var(--white);
 }
 
-.info_div {
-    width: 450px;
+/* FLEX CONTAINER INFO DIV */
+.div-flex-container-info {
+    display: inherit;
+    flex-direction: column;
+    gap: 1.6rem;
+    width: 48rem;
 }
 
-.info_heading {
-    margin-bottom: 25px;
-    font-size: 20pt;
+.div-flex-container-info span {
+    display: inline-block;
+    font-size: 2.4rem;
+    font-weight: 700;
+    font-style: italic;
 }
 
-.info_div p {
-    font-size: 16pt;
-}
-
-.flex1 {
-    grid-area: flex1;
-}
-
-.flex2 {
-    grid-area: flex2;
-}
-
-.flex3 {
-    grid-area: flex3;
-}
-
-.flex4 {
-    grid-area: flex4;
+.div-flex-container-info p {
+    font-size: 2rem;
 }
 
 /* SELECT DIV STYLE */

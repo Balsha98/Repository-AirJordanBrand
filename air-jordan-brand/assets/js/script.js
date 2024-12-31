@@ -14,26 +14,26 @@ const getStarted = singleObject(".start_select");
 const selectDiv = singleObject(".select_div");
 
 // INTERSECTION OBSERVER (NAVIGATION)
-const navElement = singleObject(".navigation");
+const pageNavContainer = singleObject(".div-page-nav-container");
 const toTopBtn = singleObject(".div_to_top");
 const navObserver = new IntersectionObserver(
     function (entry) {
         const { isIntersecting } = entry[0];
 
         if (isIntersecting) {
-            navElement.classList.remove("fixed_nav");
+            pageNavContainer.classList.remove("fixed-nav-container");
             toTopBtn.classList.add("to_top_appear");
             return;
         }
 
-        navElement.classList.add("fixed_nav");
+        pageNavContainer.classList.add("fixed-nav-container");
         toTopBtn.classList.remove("to_top_appear");
     },
     { root: null, threshold: 0 }
 );
 
-const header = singleObject("header");
-navObserver.observe(header);
+const pageHeader = singleObject(".page-header");
+navObserver.observe(pageHeader);
 
 // INTERSECTION OBSERVER (CONTENT SECTIONS)
 const sectionElements = multipleObjects(".section");
@@ -42,7 +42,7 @@ const secObserver = new IntersectionObserver(
         const { target, isIntersecting } = entry[0];
 
         if (isIntersecting) {
-            target.classList.remove("section_fade_in");
+            target.classList.remove("fade-in");
             observer.unobserve(target);
         }
     },
