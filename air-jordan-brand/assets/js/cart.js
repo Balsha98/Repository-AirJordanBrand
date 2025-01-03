@@ -1,46 +1,47 @@
 import { deleteCookie, getCookie } from "./cookie.js";
 
-const singleObject = (idClass) => document.querySelector(idClass);
-const multipleObjects = (idClass) => document.querySelectorAll(idClass);
+// ***** DOM ELEMENTS ***** //
+const homeBtn = document.querySelector(".btn-home");
+const confirmOrderBtn = document.querySelector(".btn-confirm-order");
+confirmOrderBtn.classList.add("hide-element");
 
-const creationKeys = ["shoe", "gender", "color", "size", "depth"];
+// ***** VARIABLES ***** //
+const dataKeys = ["shoe", "gender", "color", "size", "depth"];
 
-const bntHome = singleObject("#home_btn");
-const btnConfirm = singleObject("#confirm_order");
-btnConfirm.classList.add("hide_element");
-
+// ***** FUNCTIONS ***** //
 const generateImage = function (imgSrc) {
     const newImage = document.createElement("img");
     newImage.setAttribute("src", imgSrc);
     newImage.setAttribute("alt", "Chosen Shoe");
+    newImage.classList.add("shoe-image");
+
     return newImage;
 };
 
 const updateOrder = function () {
-    if (getCookie("img")) {
-        singleObject("h2").textContent = "Hope you enjoy your new shoes!";
+    if (!getCookie("img")) return;
 
-        multipleObjects(".shoe_info").forEach((span, i) => {
-            span.textContent = getCookie(creationKeys[i]);
-        });
+    document.querySelector("h2").textContent = "Hope you enjoy your new shoes!";
+    document.querySelectorAll(".span-shoe-data").forEach((span, i) => {
+        span.textContent = getCookie(dataKeys[i]);
+    });
 
-        const imgCookie = getCookie("img");
-        singleObject("#text_div").after(generateImage(imgCookie));
+    const imgCookie = getCookie("img");
+    document.querySelector("#text_div").after(generateImage(imgCookie));
 
-        btnConfirm.classList.remove("hide_element");
-    }
+    confirmOrderBtn.classList.remove("hide-element");
 };
 
-// EVENT LISTENERS
+// ***** EVENT LISTENERS ***** //
 document.body.onload = updateOrder;
 
-btnConfirm.addEventListener("click", function () {
-    singleObject(".window_overlay").classList.remove("hidden_window");
-    singleObject(".confirmation_window").classList.remove("hidden_window");
+confirmOrderBtn.addEventListener("click", function () {
+    document.querySelector(".popup-confirmation").classList.remove("hide-element");
+    document.querySelector(".blur-overlay").classList.remove("hide-element");
 });
 
-bntHome.addEventListener("click", function () {
-    const deletionKeys = [...creationKeys, "img"];
+homeBtn.addEventListener("click", function () {
+    const deletionKeys = [...dataKeys, "img"];
     deletionKeys.forEach((key) => {
         deleteCookie(key);
     });

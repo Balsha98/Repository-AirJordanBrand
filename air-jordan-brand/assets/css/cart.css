@@ -1,110 +1,85 @@
 /* IMPORTS */
 @import url("home.css");
 
-#content_div {
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    z-index: 2;
-}
-
-/* BACK_BTN STYLE */
-#back_btn {
-    width: 100px;
-    padding: 10px 25px;
-    font-size: 16pt;
-    color: var(--moreTransWhite);
-    background-color: var(--transparentRed);
-    border-radius: 50px;
-    transition: all 0.5s;
-}
-
-#back_btn:hover {
-    color: var(--white);
+/* MAIN CONTAINER */
+.main-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80rem;
+    padding: 4.8rem;
     background-color: var(--red);
-    transform: translateX(-5px);
+    box-shadow: inset 0 0 0 0.4rem var(--white);
+    transform: translate(-50%, -50%);
 }
 
-/* ORDER_DIV STYLE */
-#confirmation_div {
+.section-cart h2 {
+    font-size: 3.3rem;
+}
+
+.div-cart-content-container {
     position: relative;
-    width: 85%;
-    height: 625px;
-    padding: 50px;
-    background-color: var(--lessTransRed);
-    border: 50px solid var(--white);
-    z-index: 3;
-}
-
-#confirmation_div h1 {
-    position: absolute;
-    top: 25px;
-    right: 50px;
-    font-size: 32pt;
-}
-
-#confirmation_div img {
-    position: absolute;
-    bottom: -50px;
-    right: -50px;
-    width: 75%;
-    animation-name: shoe_appear;
+    top: 0;
+    animation-name: content-appear;
     animation-timing-function: ease-in-out;
     animation-duration: 1s;
-    transform: rotate(-7.5deg);
+}
+
+@keyframes content-appear {
+    from {
+        top: -48rem;
+    }
+    to {
+        top: 0;
+    }
+}
+
+.div-cart-content-container h3 {
+    font-size: 2.4rem;
+}
+
+.cart-content-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.cart-content-list-item {
+    display: inherit;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.cart-content-list-item p {
+    font-size: 1.8rem;
+}
+
+.cart-content-list-item span {
+    font-size: 2rem;
+}
+
+.shoe-image {
+    position: absolute;
+    bottom: -4.8rem;
+    right: -4.8rem;
+    width: 80%;
+    animation-name: shoe-appear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    transform: rotate(-8deg);
     z-index: 4;
 }
 
-@keyframes shoe_appear {
+@keyframes shoe-appear {
     from {
-        bottom: -600px;
+        bottom: -64rem;
         transform: rotate(-360deg);
     }
     to {
-        bottom: -50px;
-        transform: rotate(-7.5deg);
+        bottom: -4.8rem;
+        transform: rotate(-8deg);
     }
-}
-
-#text_div {
-    position: relative;
-    top: 0px;
-    animation-name: text_appear;
-    animation-timing-function: ease-in-out;
-    animation-duration: 1s;
-}
-
-@keyframes text_appear {
-    from {
-        top: -550px;
-    }
-    to {
-        top: 0px;
-    }
-}
-
-#text_div h2 {
-    font-size: 24pt;
-}
-
-#data_div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 240px;
-}
-
-#data_div p {
-    margin: 20px auto auto 25px;
-    font-size: 16pt;
-    font-weight: bold;
-    line-height: 50px;
-}
-
-#data_div p:nth-child(2) {
-    font-weight: normal;
-    text-align: right;
 }
 
 #confirm_order {
@@ -156,23 +131,6 @@
     transform: translate(-50%, -50%);
     opacity: 1;
     z-index: 4;
-}
-
-.window_overlay {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(5px);
-    transition: all 0.5s;
-    opacity: 1;
-    z-index: 4;
-}
-
-.hidden_window {
-    opacity: 0;
-    z-index: -1;
 }
 
 .confirmation_window h2 {
