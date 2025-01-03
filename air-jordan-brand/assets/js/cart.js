@@ -2,8 +2,9 @@ import { deleteCookie, getCookie } from "./cookie.js";
 
 // ***** DOM ELEMENTS ***** //
 const homeBtn = document.querySelector(".btn-home");
+const cartContainerDiv = document.querySelector(".div-cart-content-container");
+const cartContentHeading = document.querySelector(".cart-content-heading");
 const confirmOrderBtn = document.querySelector(".btn-confirm-order");
-confirmOrderBtn.classList.add("hide-element");
 
 // ***** VARIABLES ***** //
 const dataKeys = ["shoe", "gender", "color", "size", "depth"];
@@ -21,14 +22,12 @@ const generateImage = function (imgSrc) {
 const updateOrder = function () {
     if (!getCookie("img")) return;
 
-    document.querySelector("h2").textContent = "Hope you enjoy your new shoes!";
+    cartContentHeading.textContent = "Hope you enjoy your new shoes!";
     document.querySelectorAll(".span-shoe-data").forEach((span, i) => {
         span.textContent = getCookie(dataKeys[i]);
     });
 
-    const imgCookie = getCookie("img");
-    document.querySelector("#text_div").after(generateImage(imgCookie));
-
+    cartContainerDiv.after(generateImage(getCookie("img")));
     confirmOrderBtn.classList.remove("hide-element");
 };
 

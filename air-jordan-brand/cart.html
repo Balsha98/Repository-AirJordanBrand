@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/media/images/jordan-icon.png">
+    <link rel="icon" href="assets/media/images/jordan-icon.ico">
     <link rel="stylesheet" href="assets/css/cart.css">
     <link rel="stylesheet" href="assets/css/cart-media-queries.css">
     <script type="module" src="assets/js/cart.js" defer></script>
@@ -13,13 +13,17 @@
 
 <body>
     <div class="popup-confirmation hide-element">
-        <h2>Order Successful!</h2>
-        <p>
-            Your order has been confirmed and
-            will be with you in 5-7 business days.<br>
-            <span class="ending-msg">Thank you for choosing Air Jordan!</span>
-        </p>
-        <a href="index.html" class="btn-home">Home</a>
+        <header class="header-popup-confirmation">
+            <h2>Order Successful!</h2>
+            <p>
+                Your order has been confirmed and
+                will be with you in <span>5-7</span> business days.
+            </p>
+        </header>
+        <div class="div-popup-confirmation-ending">
+            <p>Thank you for choosing Air Jordan!</p>
+            <a class="btn-home" href="index.html">Home</a>
+        </div>
     </div>
 
     <div class="blur-overlay hide-element">&nbsp;</div>
@@ -28,33 +32,33 @@
         <section class="section-cart">
             <h2>Your Cart</h2>
             <div class="div-cart-content-container">
-                <h3>Your cart is currently empty.</h3>
-                <div class="div-cart-content">
-                    <ul class="cart-content-list">
-                        <li class="cart-content-list-item">
-                            <p>Shoe:</p>
-                            <span class="span-shoe-data">/</span>
-                        </li>
-                        <li class="cart-content-list-item">
-                            <p>M/F:</p>
-                            <span class="span-shoe-data">/</span>
-                        </li>
-                        <li class="cart-content-list-item">
-                            <p>Color:</p>
-                            <span class="span-shoe-data">/</span>
-                        </li>
-                        <li class="cart-content-list-item">
-                            <p>Size:</p>
-                            <span class="span-shoe-data">/</span>
-                        </li>
-                        <li class="cart-content-list-item">
-                            <p>Depth:</p>
-                            <span class="span-shoe-data">/</span>
-                        </li>
-                    </ul>
-                </div>
+                <h3 class="cart-content-heading">
+                    Your cart is currently empty.
+                </h3>
+                <ul class="cart-content-list">
+                    <li class="cart-content-list-item">
+                        <p>Shoe:</p>
+                        <span class="span-shoe-data">/</span>
+                    </li>
+                    <li class="cart-content-list-item">
+                        <p>M/F:</p>
+                        <span class="span-shoe-data">/</span>
+                    </li>
+                    <li class="cart-content-list-item">
+                        <p>Color:</p>
+                        <span class="span-shoe-data">/</span>
+                    </li>
+                    <li class="cart-content-list-item">
+                        <p>Size:</p>
+                        <span class="span-shoe-data">/</span>
+                    </li>
+                    <li class="cart-content-list-item">
+                        <p>Depth:</p>
+                        <span class="span-shoe-data">/</span>
+                    </li>
+                </ul>
             </div>
-            <button class="btn-confirm-order">
+            <button class="btn-confirm-order hide-element">
                 <ion-icon name="cart-outline"></ion-icon>
                 <span>Confirm Order</span>
             </button>

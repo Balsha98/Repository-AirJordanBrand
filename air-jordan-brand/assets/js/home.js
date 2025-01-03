@@ -103,8 +103,8 @@ const createSelectBox = function (options) {
 const createAnchor = function () {
     const anchorTag = document.createElement("a");
     anchorTag.setAttribute("href", "cart.html");
-    anchorTag.setAttribute("onclick", "saveShoeInfo();");
     anchorTag.classList.add("btn-confirm-selection");
+    anchorTag.addEventListener("click", saveShoeInfo);
 
     const btnTxt = document.createTextNode("Confirm");
     anchorTag.appendChild(btnTxt);
