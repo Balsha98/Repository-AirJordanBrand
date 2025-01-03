@@ -4,43 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/cart.css">
     <link rel="icon" href="assets/media/images/jordan-icon.png">
+    <link rel="stylesheet" href="assets/css/cart.css">
     <link rel="stylesheet" href="assets/css/cart-media-queries.css">
     <script type="module" src="assets/js/cart.js" defer></script>
     <title>Air Jordan Brand | Cart</title>
 </head>
 
 <body>
-    <div class="photo-overlay">&nbsp;</div>
-
-    <section class="content-div">
-        <a href="index.html" class="back-btn">&#10229;</a>
-        <div class="confirmation-div">
-            <h1>Your Cart</h1>
-            <div class="text-div">
-                <h2>Your cart is currently empty.</h2>
-                <div class="data-div">
-                    <p>Shoe:<br>
-                        M/F:<br>
-                        Color:<br>
-                        Size:<br>
-                        Depth:
-                    </p>
-                    <p>
-                        <span class="shoe-info">/</span><br>
-                        <span class="shoe-info">/</span><br>
-                        <span class="shoe-info">/</span><br>
-                        <span class="shoe-info">/</span><br>
-                        <span class="shoe-info">/</span>
-                    </p>
-                </div>
-            </div>
-            <button class="confirm-order">Confirm Order</button>
-        </div>
-    </section>
-
-    <div class="confirmation-window hidden-window">
+    <div class="popup-confirmation hide-element">
         <h2>Order Successful!</h2>
         <p>
             Your order has been confirmed and
@@ -50,7 +22,56 @@
         <a href="index.html" class="home-btn">Home</a>
     </div>
 
-    <div class="window-overlay hidden-window"></div>
+    <div class="blur-overlay hide-element">&nbsp;</div>
+
+    <main class="main-container">
+        <a href="index.html" class="btn-back">
+
+        </a>
+        <section class="section-cart">
+            <h2>Your Cart</h2>
+            <div class="div-cart-content-container">
+                <h3>Your cart is currently empty.</h3>
+                <div class="div-cart-content">
+                    <ul>
+                        <li>
+                            <span>Shoe:</span>
+                        </li>
+                        <li>
+                            <span>M/F:</span>
+                        </li>
+                        <li>
+                            <span>Color:</span>
+                        </li>
+                        <li>
+                            <span>Size:</span>
+                        </li>
+                        <li>
+                            <span>Depth:</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <span class="span-shoe-data"></span>
+                        </li>
+                        <li>
+                            <span class="span-shoe-data"></span>
+                        </li>
+                        <li>
+                            <span class="span-shoe-data"></span>
+                        </li>
+                        <li>
+                            <span class="span-shoe-data"></span>
+                        </li>
+                        <li>
+                            <span class="span-shoe-data"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="btn-confirm-order">Confirm Order</button>
+        </section>
+    </main>
 
     <!-- ICON SCRIPT -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

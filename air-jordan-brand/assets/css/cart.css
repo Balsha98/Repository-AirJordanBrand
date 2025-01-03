@@ -1,14 +1,6 @@
 /* IMPORTS */
 @import url("home.css");
 
-/* GENERAL SELECTORS */
-body {
-    padding: 50px 75px;
-    background-image: url("../media/images/mj-clap.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
 #content_div {
     position: relative;
     display: flex;
