@@ -104,6 +104,7 @@ body::-webkit-scrollbar {
     z-index: 0;
 }
 
+/* BLUR OVERLAY */
 .blur-overlay {
     position: absolute;
     top: 0;
@@ -112,6 +113,25 @@ body::-webkit-scrollbar {
     height: 100vh;
     backdrop-filter: blur(0.2rem);
     z-index: 1;
+}
+
+/* MINIMIZED NAVIGATION  */
+.minimized-nav-container {
+    padding: 0.8rem 4.8rem;
+}
+
+.minimized-nav-container img {
+    height: 6.4rem;
+}
+
+.minimized-nav-container a:link,
+.minimized-nav-container a:visited {
+    font-size: 1.8rem;
+}
+
+.minimized-nav-container .page-nav-links-list-item:last-child a:link,
+.minimized-nav-container .page-nav-links-list-item:last-child a:visited {
+    padding: 0.8rem 2.4rem;
 }
 
 /* SECTIONS */

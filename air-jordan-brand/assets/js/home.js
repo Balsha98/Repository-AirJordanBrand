@@ -25,11 +25,13 @@ const navObserver = new IntersectionObserver(
 
         if (isIntersecting) {
             pageNavContainer.classList.remove("fixed-nav-container");
+            pageNavContainer.classList.remove("minimized-nav-container");
             toTopBtn.classList.add("y-appear");
             return;
         }
 
         pageNavContainer.classList.add("fixed-nav-container");
+        pageNavContainer.classList.add("minimized-nav-container");
         toTopBtn.classList.remove("y-appear");
     },
     { root: null, threshold: 0 }
