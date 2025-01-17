@@ -1,3 +1,22 @@
+/* PAGE BODY */
+.page-body {
+    background-image: url(../media/images/mj-clap.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--transparent-black);
+    z-index: 1;
+}
+
 /* POPUP CONFIRMATION DIV */
 .popup-confirmation {
     position: absolute;
@@ -68,9 +87,10 @@
     left: 50%;
     width: 80rem;
     padding: 6.4rem;
-    background-color: var(--red);
+    background-color: var(--less-transparent-red);
     box-shadow: inset 0 0 0 0.4rem var(--white);
     transform: translate(-50%, -50%);
+    z-index: 3;
 }
 
 .section-cart {
