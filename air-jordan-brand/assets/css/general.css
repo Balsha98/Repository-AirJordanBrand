@@ -1,0 +1,42 @@
+/* IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
+
+/* VARIABLES */
+:root {
+    --white: #fff;
+    --black: #000;
+    --transparent-white: rgba(255, 255, 255, 0.8);
+    --more-transparent-red: rgba(255, 255, 255, 0.6);
+    --red: #ba4242;
+    --transparent-red: rgba(186, 66, 66, 0.8);
+    --less-transparent-red: rgba(186, 66, 66, 0.9);
+}
+
+/* GENERAL SELECTORS */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Urbanist";
+    color: var(--white);
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--black);
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* REUSABLE CLASSES */
+.hide-element {
+    display: none !important;
+}
