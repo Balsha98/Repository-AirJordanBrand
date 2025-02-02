@@ -93,6 +93,47 @@
     z-index: 3;
 }
 
+/* PAGE NAVIGATION */
+.page-nav {
+    position: absolute;
+    top: 0.4rem;
+    left: -3.6rem;
+}
+
+.page-nav-links-list {
+    display: flex;
+    list-style: none;
+}
+
+.page-nav-links-list-item {
+    width: 3.6rem;
+    color: var(--black);
+    background-color: var(--white);
+    border-left: 0.2rem solid var(--white);
+    border-radius: 0.4rem 0 0 0.4rem;
+    transition: all 0.5s;
+}
+
+.page-nav-links-list-item a:link,
+.page-nav-links-list-item a:visited {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem 1.6rem;
+    color: inherit;
+}
+
+.page-nav-links-list-item span {
+    font-size: 1.6rem;
+    color: inherit;
+}
+
+.page-nav-links-list-item:hover {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+/* CART SECTION */
 .section-cart {
     display: flex;
     flex-direction: column;
