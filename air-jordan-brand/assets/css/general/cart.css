@@ -17,8 +17,21 @@
     z-index: 1;
 }
 
-/* POPUP CONFIRMATION DIV */
+/* POPUP CONFIRMATION */
 .popup-confirmation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--transparent-black);
+    backdrop-filter: blur(0.2rem);
+    transition: all 0.5s;
+    z-index: 4;
+}
+
+/* POPUP CONFIRMATION MODAL */
+.popup-confirmation-modal {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -29,10 +42,8 @@
     text-align: center;
     background-color: var(--black);
     box-shadow: 0 0.4rem 0.8rem var(--black);
-    border-radius: 0.8rem;
     transform: translate(-50%, -50%);
-    transition: all 0.5s;
-    z-index: 4;
+    border-radius: 0.8rem;
 }
 
 .header-popup-confirmation {

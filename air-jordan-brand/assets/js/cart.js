@@ -36,7 +36,6 @@ document.body.onload = updateOrder;
 
 confirmOrderBtn.addEventListener("click", function () {
     document.querySelector(".popup-confirmation").classList.remove("hide-element");
-    document.querySelector(".blur-overlay").classList.remove("hide-element");
 });
 
 homeBtn.addEventListener("click", function () {
