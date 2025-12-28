@@ -98,4 +98,4 @@ If you enjoyed this project or have any questions, feel free to reach out!
 
 ---
 
-Made with ❤️, HTML5, CSS3, & JavaScript!
+Made with HTML5, CSS3, JavaScript, & ❤️!
