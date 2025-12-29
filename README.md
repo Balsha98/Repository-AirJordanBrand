@@ -64,7 +64,7 @@ Repository-AirJordanBrand/
 │   │   │
 │   │   ├── css/                # Styling.
 │   │   │
-│   │   ├── javascript/                 # JavaScript logic.
+│   │   ├── javascript/         # JavaScript logic.
 │   │   │
 │   │   ├── json/               # Shoe selection data.
 │   │   │
